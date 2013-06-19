@@ -104,12 +104,12 @@ Lungo.Notification = do(lng = Lungo) ->
     _subscribeEvents()
 
   _show = (html, stylesheet, block = true) ->
-    ##if block then _el.removeClass "push" else _el.addClass "push"
+    if block then _el.removeClass "push" else _el.addClass "push"
 
-    ##unless _window.hasClass("show")
-    _el.addClass("show")
-    ##else
-    ##  _window.removeClass STYLE.SHOW
+    unless _window.hasClass("show")
+      _el.addClass("show")
+    else
+      _window.removeClass STYLE.SHOW
 
     setTimeout (->
       _window.html html

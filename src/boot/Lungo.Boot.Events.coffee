@@ -57,7 +57,7 @@ Lungo.Boot.Events = do (lng = Lungo) ->
     url = el.data "async"
     id = el.data "view-#{type}"
 
-    lng.Notification.show()
+    ##lng.Notification.show()
     if type is C.ELEMENT.ARTICLE
       section_id = lng.Element.Cache.section.attr(C.ATTRIBUTE.ID)
       lng.Resource.load url, C.ELEMENT.SECTION + "#" + section_id

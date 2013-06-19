@@ -11,13 +11,14 @@ LOADING = 104px
 WINDOW_WIDTH = 280px
 
 .notification
-  position: relative
+  position: absolute
   top: 0
   left: 0
   width: 100%
   height: 100%
-  z-index: 1980
+  z-index: 3
   display: none
+  background-color: rgba(0,0,0,0.75)
 
   &.show
     display-box()
@@ -41,6 +42,9 @@ WINDOW_WIDTH = 280px
     &:not(.push)
       transition-property opacity, margin-top
       margin-top: 100%
+      -webkit-border-radius: 14px
+      -moz-border-radius:  14px
+      border-radius: 14px
       &.show
         margin-top: 0%
 
